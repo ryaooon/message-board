@@ -2,8 +2,7 @@
 
 <h1>メッセージ一覧</h1>
 <% @messages.each do |message| %>
-  名前:<%= message.name %>
-  内容:<%= message.body %>
+
   <br>
 <% end %>
 
@@ -39,13 +38,27 @@
   <% end %>
 
 
+<form class="form-inline">
+  <div class="form-group">
+    
+  
+  名前:</label>
+  <input type="text" class="form-control"  >
+  </div>
 
-  名前:
-  <%= f.text_field :name %>
 
-  内容:
-  <%= f.text_field :body %>
+<div class="form-group">
+    
+  内容:</label>
+
+  <textarea type="message" class="form-control"  >
+  </textarea></div>
+
+<div class="form-group">
+    <label for="exampleInputFile">添付:</label>
+    <input type="file" id="exampleInputFile">
+    </div>
+
+  
   <%= f.submit class: "btn btn-sm btn-primary" %>
 <% end %>
-
-
