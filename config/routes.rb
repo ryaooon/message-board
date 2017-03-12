@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'messages#index'
-  resources :messages , only: [:create]
-
+  resources :messages ,  except: [:index, :new]
+end
 
   
 
@@ -60,4 +60,3 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
